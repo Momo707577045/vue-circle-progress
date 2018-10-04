@@ -14,10 +14,8 @@
         :cx="width/2"
         :stroke="barColor"
         :stroke-width="radius"
-        :style="{
-          'stroke-dasharray':(width-radius)*3.14,
-          'stroke-dashoffset': isAnimation ? (width-radius) * 3.14 : (width - radius) * 3.14 * (100 - progress) / 100,
-        }"
+        :stroke-dasharray="(width-radius)*3.14"
+        :stroke-dashoffset="isAnimation ? (width-radius) * 3.14 : (width - radius) * 3.14 * (100 - progress) / 100"
         fill="none"
         stroke-linecap="round"
       />
@@ -28,9 +26,9 @@
 <script>
 export default {
   props: {
-    width: Number, // 圆的大小
-    radius: Number, // 进度条厚度
-    progress: Number, // 进度条百分比
+    width: [Number, String], // 圆的大小
+    radius: [Number, String], // 进度条厚度
+    progress: [Number, String], // 进度条百分比
     barColor: String, // 进度条颜色
     backgroundColor: String, // 背景颜色
     isAnimation: { // 是否是动画效果

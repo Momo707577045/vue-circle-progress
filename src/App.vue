@@ -60,7 +60,7 @@
       v-if="isShow"
       ref="$circle"
       class="progress"
-      isAnimation="true"
+      :isAnimation="true"
       :width="width"
       :radius="radius"
       :progress="progress"
@@ -74,10 +74,10 @@
     <ul>
       <li>
         <label for="width">圆宽（px）:</label>
-        <input v-model="width" id="width" type="text" placeholder="例如：140"></li>
+        <input v-model="width" id="width" type="number" placeholder="例如：140"></li>
       <li>
         <label for="radius">进度条宽度（px）:</label>
-        <input v-model="radius" id="radius" type="text" placeholder="例如：12"></li>
+        <input v-model="radius" id="radius" type="number" placeholder="例如：12"></li>
       <li>
         <label for="progress">进度百分比:</label>
         <input v-model="progress" id="progress" type="text" placeholder="例如：70"></li>
@@ -90,11 +90,11 @@
       </li>
       <li>
         <label for="duration">动画时长（ms）:</label>
-        <input v-model="duration" id="duration" type="text" placeholder="例如：1000">
+        <input v-model="duration" id="duration" type="number" placeholder="例如：1000">
       </li>
       <li>
         <label for="delay">延迟执行（ms）:</label>
-        <input v-model="delay" id="delay" type="text" placeholder="例如：20">
+        <input v-model="delay" id="delay" type="number" placeholder="例如：20">
       </li>
       <li>
         <label for="timeFunction">缓动算法:</label>
