@@ -25,7 +25,7 @@ vue圆形进度条组件，自由可定制
  | 参数名 | 值类型 | 是否必填 | 参数作用 | 默认值 |
  | :------: | :------: | :------: | :------: | :------: |
  | id | String | 选填 | 组件的id，多次定义设置不同的值 | 1 |
- |  width | Number | 必填 | 设置圆整体的大小，单位为px | 无 |
+ | width | Number | 必填 | 设置圆整体的大小，单位为px | 无 |
  | radius | Number | 必填 | 设置进度条宽度，单位为px | 无 |
  | progress | Number | 必填 | 设置进度百分比 | 无 |
  | barColor | String | 必填 | 设置进度条颜色 | 无 |
@@ -33,6 +33,7 @@ vue圆形进度条组件，自由可定制
  | delay | Number | 选填 | 延迟多久执行，单位为ms | 20 |
  | duration | Number | 选填 | 动画整体时长，单位为ms | 1000 |
  | timeFunction | String | 选填 | 动画缓动算法 | cubic-bezier(0.99, 0.01, 0.22, 0.94) |
+ | isRound | Boolean | 选填 | 进度条是否使用圆滑结束 | true |
  | isAnimation | Boolean | 选填 | 是否以动画的方式呈现 | true |
 
   ```
@@ -45,6 +46,7 @@ vue圆形进度条组件，自由可定制
     :duration="1000"
     :barColor="#F2AE57"
     :backgroundColor="#FFE8CC"
+    :isRound="true"
     :isAnimation="true"
     :timeFunction="cubic-bezier(0.99, 0.01, 0.22, 0.94)"
   >

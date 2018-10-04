@@ -14,10 +14,10 @@
         :cx="width/2"
         :stroke="barColor"
         :stroke-width="radius"
+        :stroke-linecap="isRound ? 'round' : 'square'"
         :stroke-dasharray="(width-radius)*3.14"
         :stroke-dashoffset="isAnimation ? (width-radius) * 3.14 : (width - radius) * 3.14 * (100 - progress) / 100"
         fill="none"
-        stroke-linecap="round"
       />
     </svg>
   </div>
@@ -32,6 +32,10 @@ export default {
     barColor: String, // 进度条颜色
     backgroundColor: String, // 背景颜色
     isAnimation: { // 是否是动画效果
+      type: Boolean,
+      default: true,
+    },
+    isRound: { // 是否是圆形画笔
       type: Boolean,
       default: true,
     },

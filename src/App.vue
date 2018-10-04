@@ -61,6 +61,7 @@
       ref="$circle"
       class="progress"
       :isAnimation="true"
+      :isRound="true"
       :width="width"
       :radius="radius"
       :progress="progress"
