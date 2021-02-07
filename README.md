@@ -44,11 +44,11 @@ vue圆形进度条组件，自由可定制
     :progress="70"
     :delay="200"
     :duration="1000"
-    :barColor="#F2AE57"
-    :backgroundColor="#FFE8CC"
+    :barColor="'#F2AE57'"
+    :backgroundColor="'#FFE8CC'"
     :isRound="true"
     :isAnimation="true"
-    :timeFunction="cubic-bezier(0.99, 0.01, 0.22, 0.94)"
+    :timeFunction="'cubic-bezier(0.99, 0.01, 0.22, 0.94)'"
   >
   ```
 
